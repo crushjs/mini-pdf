@@ -1,0 +1,59 @@
+{
+    "name": "crushjs/mini-pdf",
+    "description": "A lightweight PDF generator for Laravel with built-in Khmer (Unicode) support",
+    "keywords": [
+        "laravel",
+        "pdf",
+        "mpdf",
+        "khmer",
+        "unicode"
+    ],
+    "homepage": "https://github.com/crushjs/mini-pdf",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Crushjs",
+            "homepage": "https://github.com/crushjs"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Crushjs\\MiniPdf\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Crushjs\\MiniPdf\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Crushjs\\MiniPdf\\MiniPdfServiceProvider"
+            ],
+            "aliases": {
+                "MiniPdf": "Crushjs\\MiniPdf\\Facades\\MiniPdf"
+            }
+        }
+    },
+    "require": {
+        "php": "^8.2",
+        "mpdf/mpdf": "^8.2",
+        "illuminate/filesystem": "^10.0|^11.0|^12.0|^13.0",
+        "illuminate/http": "^10.0|^11.0|^12.0|^13.0",
+        "illuminate/support": "^10.0|^11.0|^12.0|^13.0",
+        "illuminate/view": "^10.0|^11.0|^12.0|^13.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.0|^9.0|^10.0|^11.0",
+        "phpunit/phpunit": "^10.5|^11.0|^12.0"
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
