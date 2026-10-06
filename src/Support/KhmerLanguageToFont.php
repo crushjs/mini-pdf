@@ -9,9 +9,7 @@ use Mpdf\Language\LanguageToFont;
  */
 class KhmerLanguageToFont extends LanguageToFont
 {
-    public function __construct(protected string $font)
-    {
-    }
+    public function __construct(protected string $font) {}
 
     public function getLanguageOptions($llcc, $adobeCJK)
     {
